@@ -1,4 +1,4 @@
-package com.iesam.nissan;
+package com.iesam.nissan.presentation;
 
 public class Main {
     public static void main(String[] args) {
