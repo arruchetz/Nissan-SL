@@ -1,6 +1,6 @@
 package com.iesam.nissan.domain.models;
 
-public class cuadroMarco implements componentes {
+public class cuadroMando implements componentes{
     private Integer cod;
     private String modelo;
 
@@ -12,7 +12,6 @@ public class cuadroMarco implements componentes {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
 
     @Override
     public String getCod() {
