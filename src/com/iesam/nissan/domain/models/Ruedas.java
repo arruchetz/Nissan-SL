@@ -1,10 +1,30 @@
 package com.iesam.nissan.domain.models;
 
-public class cuadroMando implements componentes{
+public class Ruedas implements Componentes {
+
     private Integer cod;
+    private String marca;
     private String modelo;
+    private String diametro;
     private String unidades;
 
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+
+    public String getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(String diametro) {
+        this.diametro = diametro;
+    }
 
     public void setCod(Integer cod) {
         this.cod = cod;
@@ -19,7 +39,7 @@ public class cuadroMando implements componentes{
     }
 
     @Override
-    public Integer getCod() {
+    public String getCod() {
         return null;
     }
 
@@ -32,4 +52,5 @@ public class cuadroMando implements componentes{
     public String getUnidades() {
         return null;
     }
+
 }

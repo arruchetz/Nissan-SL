@@ -1,36 +1,36 @@
 package com.iesam.nissan.data;
 
-import com.iesam.nissan.domain.models.chasis;
+import com.iesam.nissan.domain.models.Chasis;
 
 import java.util.Map;
 import java.util.TreeMap;
 
 public class ChasisDataStore {
 
-    private static ChasisDataStore chasisDataStore = null;
+        private static ChasisDataStore chasisDataStore = null;
 
-    private Map<Integer, chasis> dataStore = new TreeMap<>();
+        private Map<Integer, Chasis> dataStore = new TreeMap<>();
 
-    public void añadir(chasis chasis) {
-        dataStore.put(chasis.getCodBast(), chasis);
-    }
-
-    public void modificar(chasis chasis) {
-        dataStore.put(chasis.getCodBast(), chasis );
-    }
-
-    public chasis eliminar(chasis chasis ) {
-        return dataStore.remove(chasis);
-    }
-
-    public void buscar(chasis chasis) {
-        dataStore.put(chasis.getCodBast(), chasis);
-    }
-
-    public static ChasisDataStore getChasisDataStore() {
-        if (chasisDataStore == null) {
-            chasisDataStore = new ChasisDataStore();
+        public void guardar(Chasis chasis) {
+            dataStore.put(chasis.getCodBast(), chasis);
         }
-        return chasisDataStore;
-    }
+
+        public Chasis eliminar(Integer codBast) {
+            return dataStore.remove(codBast);
+        }
+
+        public Chasis buscar(Integer codBast) {
+            return dataStore.get(codBast);
+        }
+
+        public void modificar(Chasis chasis) {
+            dataStore.put(chasis.getCodBast(), chasis);
+        }
+
+        public static ChasisDataStore getChasisDataStore() {
+            if (chasisDataStore == null) {
+                chasisDataStore = new ChasisDataStore();
+            }
+            return chasisDataStore;
+        }
 }

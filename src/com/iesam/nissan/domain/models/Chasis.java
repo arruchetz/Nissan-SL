@@ -1,11 +1,11 @@
 package com.iesam.nissan.domain.models;
 
-public class chasis {
+public class Chasis {
     private Integer codBast;
     private String modelo;
     private String marca;
 
-    private componentes componentes;
+    private Componentes componentes;
 
     public Integer getCodBast() {
         return codBast;
@@ -31,11 +31,11 @@ public class chasis {
         this.marca = marca;
     }
 
-    public componentes getComponentes() {
+    public Componentes getComponentes() {
         return componentes;
     }
 
-    public void setComponentes(componentes componentes) {
+    public void setComponentes(Componentes componentes) {
         this.componentes = componentes;
     }
 }
