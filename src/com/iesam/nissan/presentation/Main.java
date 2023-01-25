@@ -87,5 +87,15 @@ public class Main {
         chasisD.setComponentes(ruedas1);
         chasisD.setComponentes(motor1);
         chasisD.setComponentes(cuadromando2);
+
+        ChasisPrinter chasisPrinter = new ChasisPrinter();
+        //Imprimir el chasis A
+        chasisPrinter.imprimir(chasisA);
+        //Imprimir el chasis B
+        chasisPrinter.imprimir(chasisB);
+        //Imprimir el chasis C
+        chasisPrinter.imprimir(chasisC);
+        //Imprimir el chasis D
+        chasisPrinter.imprimir(chasisD);
     }
 }
