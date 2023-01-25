@@ -2,6 +2,8 @@ package com.iesam.nissan.domain.models;
 
 public interface componentes {
 
-    public String getCod();
+    public Integer getCod();
     public String getModelo();
+
+    public  String getUnidades();
 }

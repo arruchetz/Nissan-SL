@@ -6,7 +6,7 @@ public class ruedas implements componentes{
     private String marca;
     private String modelo;
     private String diametro;
-
+    private String unidades;
 
 
     public String getMarca() {
@@ -34,8 +34,12 @@ public class ruedas implements componentes{
         this.modelo = modelo;
     }
 
+    public void setUnidades(String unidades) {
+        this.unidades = unidades;
+    }
+
     @Override
-    public String getCod() {
+    public Integer getCod() {
         return null;
     }
 
@@ -43,4 +47,10 @@ public class ruedas implements componentes{
     public String getModelo() {
         return null;
     }
+
+    @Override
+    public String getUnidades() {
+        return null;
+    }
+
 }

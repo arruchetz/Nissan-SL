@@ -6,6 +6,7 @@ public class motor implements componentes {
     private String cilindrada;
     private String modelo;
     private String caballos;
+    private String unidades;
 
 
     public String getCilindrada() {
@@ -33,13 +34,22 @@ public class motor implements componentes {
         this.modelo = modelo;
     }
 
+    public void setUnidades(String unidades) {
+        this.unidades = unidades;
+    }
+
     @Override
-    public String getCod() {
+    public Integer getCod() {
         return null;
     }
 
     @Override
     public String getModelo() {
+        return null;
+    }
+
+    @Override
+    public String getUnidades() {
         return null;
     }
 

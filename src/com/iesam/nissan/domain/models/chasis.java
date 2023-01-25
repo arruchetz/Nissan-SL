@@ -5,7 +5,9 @@ public class chasis {
     private String modelo;
     private String marca;
 
-    public String getCodBast() {
+    private componentes componentes;
+
+    public Integer getCodBast() {
         return codBast;
     }
 
@@ -27,5 +29,13 @@ public class chasis {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public componentes getComponentes() {
+        return componentes;
+    }
+
+    public void setComponentes(componentes componentes) {
+        this.componentes = componentes;
     }
 }
