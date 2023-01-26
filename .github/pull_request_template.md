@@ -15,7 +15,7 @@
 <!-- Captura de pantalla de la consola -->
 
 ## Disclaimer
-
+ 
 ## Objetivos
 
 <!-- Lo actualiza el profesor.. 
