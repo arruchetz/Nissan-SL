@@ -1,9 +1,6 @@
 package com.iesam.nissan.presentation;
 
-import com.iesam.nissan.domain.models.Chasis;
-import com.iesam.nissan.domain.models.CuadroMando;
-import com.iesam.nissan.domain.models.Motor;
-import com.iesam.nissan.domain.models.Ruedas;
+import com.iesam.nissan.domain.models.*;
 import com.iesam.nissan.domain.usecase.Chasis.BuscarChasisUseCase;
 import com.iesam.nissan.domain.usecase.Chasis.EliminarChasisUseCase;
 import com.iesam.nissan.domain.usecase.Chasis.GuardarChasisUseCase;
@@ -60,7 +57,7 @@ public class Main {
 
         //Crear ChasisA
         Chasis chasisA = new Chasis();
-        chasisA.setCodBast(1);
+        chasisA.setCodBast(11);
         chasisA.setMarca("Toyota");
         chasisA.setModelo("Supra");
         chasisA.setComponentes(ruedas1);
@@ -69,7 +66,7 @@ public class Main {
 
         //Crear ChasisB
         Chasis chasisB = new Chasis();
-        chasisB.setCodBast(10);
+        chasisB.setCodBast(110);
         chasisB.setMarca("Nissan");
         chasisB.setModelo("R-GTR 34");
         chasisB.setComponentes(ruedas2);
@@ -78,7 +75,7 @@ public class Main {
 
         //Crear ChasisC
         Chasis chasisC = new Chasis();
-        chasisC.setCodBast(100);
+        chasisC.setCodBast(1100);
         chasisC.setMarca("Nissan");
         chasisC.setModelo("200xs");
         chasisC.setComponentes(ruedas1);
@@ -87,7 +84,7 @@ public class Main {
 
         //Crear ChasisD
         Chasis chasisD = new Chasis();
-        chasisD.setCodBast(1000);
+        chasisD.setCodBast(11000);
         chasisD.setMarca("Nissan");
         chasisD.setModelo("Primera");
         chasisD.setComponentes(ruedas1);
@@ -96,7 +93,7 @@ public class Main {
 
         //Guardar chasis
         GuardarChasisUseCase guardarChasisUseCase = new GuardarChasisUseCase();
-        guardarChasisUseCase.execute(chasisA);
+        guardarChasisUseCase.execute(chasisA );
 
         //Eliminar chasis
         EliminarChasisUseCase eliminarChasisUseCase = new EliminarChasisUseCase();
@@ -105,6 +102,7 @@ public class Main {
         //Buscar chasis
         BuscarChasisUseCase buscarChasisUseCase = new BuscarChasisUseCase();
         buscarChasisUseCase.execute(chasisC.getCodBast());
+
 
         //Guardar componentes
         GuardarComponentesUseCase guardarComponentesUseCase = new GuardarComponentesUseCase();
@@ -116,7 +114,7 @@ public class Main {
 
         //Buscar componentes
         BuscarComponentesUseCase buscarComponentesUseCase = new BuscarComponentesUseCase();
-        buscarComponentesUseCase.execute();
+        buscarComponentesUseCase.execute(chasisA.getCodBast());
 
         ChasisPrinter chasisPrinter = new ChasisPrinter();
         //Imprimir el chasis A
