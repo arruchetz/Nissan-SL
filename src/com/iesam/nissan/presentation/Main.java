@@ -4,6 +4,12 @@ import com.iesam.nissan.domain.models.Chasis;
 import com.iesam.nissan.domain.models.CuadroMando;
 import com.iesam.nissan.domain.models.Motor;
 import com.iesam.nissan.domain.models.Ruedas;
+import com.iesam.nissan.domain.usecase.Chasis.BuscarChasisUseCase;
+import com.iesam.nissan.domain.usecase.Chasis.EliminarChasisUseCase;
+import com.iesam.nissan.domain.usecase.Chasis.GuardarChasisUseCase;
+import com.iesam.nissan.domain.usecase.Componentes.BuscarComponentesUseCase;
+import com.iesam.nissan.domain.usecase.Componentes.EliminarComponentesUseCase;
+import com.iesam.nissan.domain.usecase.Componentes.GuardarComponentesUseCase;
 
 public class Main {
     public static void main(String[] args) {
@@ -87,6 +93,30 @@ public class Main {
         chasisD.setComponentes(ruedas1);
         chasisD.setComponentes(motor1);
         chasisD.setComponentes(cuadromando2);
+
+        //Guardar chasis
+        GuardarChasisUseCase guardarChasisUseCase = new GuardarChasisUseCase();
+        guardarChasisUseCase.execute(chasisA);
+
+        //Eliminar chasis
+        EliminarChasisUseCase eliminarChasisUseCase = new EliminarChasisUseCase();
+        eliminarChasisUseCase.execute(chasisB.getCodBast());
+
+        //Buscar chasis
+        BuscarChasisUseCase buscarChasisUseCase = new BuscarChasisUseCase();
+        buscarChasisUseCase.execute(chasisC.getCodBast());
+
+        //Guardar componentes
+        GuardarComponentesUseCase guardarComponentesUseCase = new GuardarComponentesUseCase();
+        guardarComponentesUseCase.execute(chasisA.getComponentes());
+
+        //Eliminar componentes
+        EliminarComponentesUseCase eliminarComponentesUseCase = new EliminarComponentesUseCase();
+        eliminarComponentesUseCase.execute(chasisB.getComponentes());
+
+        //Buscar componentes
+        BuscarComponentesUseCase buscarComponentesUseCase = new BuscarComponentesUseCase();
+        buscarComponentesUseCase.execute();
 
         ChasisPrinter chasisPrinter = new ChasisPrinter();
         //Imprimir el chasis A
